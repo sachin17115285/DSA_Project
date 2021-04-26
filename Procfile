@@ -1,2 +1,2 @@
-web: gunicorn tutorial.wsgi
+web: gunicorn ecommerce.wsgi
 
