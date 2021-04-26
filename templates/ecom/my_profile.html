@@ -51,10 +51,15 @@
 </style>
 <br><br><br>
 <div style="padding-left:300px;" class="container">
-
+        {% if customer.profile_pic %}
         <div class="col-sm-2 col-md-2">
             <img src="{% static customer.profile_pic.url %}"   alt="profile pic" class="img-rounded img-responsive" />
         </div>
+        {% else %}
+        <div class="col-sm-2 col-md-2">
+          <img src="{% static "images/default_pp.jpg" %}"   alt="profile pic" class="img-rounded img-responsive" />
+      </div>
+        {% endif %}
         <div class="col-sm-4 col-md-4">
             <blockquote>
               <p></p>

@@ -20,7 +20,7 @@ def home_view(request):
     return render(request,'ecom/index.html',{'products':products,'product_count_in_cart':product_count_in_cart})
 
 
-#for showing login button for admin(by sumit)
+#for showing login button for admin
 def adminclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
@@ -450,7 +450,7 @@ def my_order_view(request):
 
 
 
-#--------------for discharge patient bill (pdf) download and printing
+#--------------for download and printing
 import io
 from xhtml2pdf import pisa
 from django.template.loader import get_template
